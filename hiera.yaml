@@ -1,0 +1,22 @@
+---
+:backends:
+  - yaml
+#  - json
+
+:yaml:
+  :datadir: "/etc/puppet/environments/%{environment}/hieradb"
+
+
+
+:hierarchy:
+  - "institutes/%{institute}/%{clientcert}"
+  - common
+
+
+#:json:
+#  :datadir: "/etc/puppet/environments/%{environment}/hieradb"
+
+:puppet:
+  :datasource: data
+
+:merge_behavior: deeper
